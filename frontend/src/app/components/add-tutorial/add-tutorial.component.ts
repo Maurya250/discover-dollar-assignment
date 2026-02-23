@@ -14,6 +14,7 @@ export class AddTutorialComponent {
     description: '',
     published: false
   };
+
   submitted = false;
 
   constructor(private tutorialService: TutorialService) { }
