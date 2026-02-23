@@ -6,10 +6,10 @@ ENV NODE_ENV=production
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm install
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 8080
 
 CMD ["node", "server.js"]
