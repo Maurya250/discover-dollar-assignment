@@ -38,12 +38,9 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            if [ ! -d "discover-dollar-assignment" ]; then
-              git clone https://github.com/maurya250/discover-dollar-assignment.git
-            fi
-
-            cd discover-dollar-assignment
-            git pull origin main
-
-            docker-compose pull
-            docker-compose up -d --build
+            script: |
+              cd discover-dollar-assignment
+              git pull origin main
+              docker-compose down
+              docker-compose pull
+              docker-compose up -d --build 
