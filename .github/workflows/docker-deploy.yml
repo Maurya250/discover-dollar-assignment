@@ -39,7 +39,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             if [ ! -d "discover-dollar-assignment" ]; then
-              git clone https://github.com/${{ secrets.EC2_USER }}/discover-dollar-assignment.git
+              git clone https://github.com/maurya250/discover-dollar-assignment.git
             fi
 
             cd discover-dollar-assignment
